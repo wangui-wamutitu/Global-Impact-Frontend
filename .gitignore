@@ -1,0 +1,33 @@
+# Environment
+.env
+.env.*
+
+# Next.js build
+.next/
+
+# Node modules
+node_modules/
+
+# System files
+.DS_Store
+Thumbs.db
+*.log
+*.swp
+
+# IDEs
+.vscode/
+.idea/
+
+# Testing
+coverage/
+.nyc_output/
+
+# Build output
+dist/
+out/
+build/
+
+# Lint/Cache
+.eslintcache
+.cache/
+
