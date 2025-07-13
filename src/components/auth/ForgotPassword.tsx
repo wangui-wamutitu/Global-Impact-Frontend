@@ -6,6 +6,10 @@ import { useRouter } from "next/navigation";
 import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
 
+type FormValues = {
+  email: string;
+};
+
 const ForgotPassword = ({
   setShowSection,
   setHandleBack,
@@ -26,16 +30,16 @@ const ForgotPassword = ({
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm({
+  } = useForm<FormValues>({
     mode: "onChange",
   });
   useEffect(() => {
     setHandleBack(() => () => {
       router.push("/login");
     });
-  }, []);
+  }, [setHandleBack]);
 
-  const onSubmit = (data: any) => {
+  const onSubmit = () => {
     setLoading(true);
 
     setTimeout(() => {

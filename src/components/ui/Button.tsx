@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import { FaArrowRight } from "react-icons/fa6";
 import { ImSpinner2 } from "react-icons/im";
 import clsx from "clsx";
@@ -13,7 +13,6 @@ type ButtonProps = {
   className?: string;
   loading?: boolean;
   loadingText?: string;
-  simulateLoading?: boolean;
 } & React.ButtonHTMLAttributes<HTMLButtonElement>;
 
 const Button = ({
@@ -24,7 +23,6 @@ const Button = ({
   className,
   loading = false,
   loadingText = "Loading...",
-  simulateLoading = false,
   disabled,
   ...props
 }: ButtonProps) => {
@@ -41,7 +39,7 @@ const Button = ({
       disabled={isDisabled}
       {...props}
     >
-      {(!icon || iconPosition === "right") ? <div></div> : null}
+      {!icon || iconPosition === "right" ? <div></div> : null}
       {icon && iconPosition === "left" && !loading && (
         <span className="flex items-center justify-center w-[32px] h-[32px] bg-white/30 rounded-full">
           {icon}
@@ -64,7 +62,7 @@ const Button = ({
           {icon}
         </span>
       )}
-      {(!icon || iconPosition === "left") ? <div></div> : null}
+      {!icon || iconPosition === "left" ? <div></div> : null}
     </button>
   );
 };

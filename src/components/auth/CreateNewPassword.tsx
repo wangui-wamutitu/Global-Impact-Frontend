@@ -8,6 +8,8 @@ import { useRouter } from "next/navigation";
 import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
 
+type FormValues = { password: string; confirmpassword: string };
+
 const CreateNewPassword = ({
   setShowSection,
   setHandleBack,
@@ -31,20 +33,20 @@ const CreateNewPassword = ({
         newPassword: false,
       });
     });
-  }, []);
+  }, [setHandleBack]);
   const {
     register,
     handleSubmit,
     formState: { errors },
     watch,
-  } = useForm({
+  } = useForm<FormValues>({
     mode: "onChange",
   });
 
   const password = watch("password");
   const router = useRouter();
 
-  const onSubmit = (data: any) => {
+  const onSubmit = (data: FormValues) => {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);

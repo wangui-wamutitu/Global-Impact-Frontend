@@ -8,18 +8,23 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { toast } from "react-toastify";
 
+type FormValues = {
+  email: string;
+  password: string;
+};
+
 export default function LoginForm() {
   const {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm({
+  } = useForm<FormValues>({
     mode: "onChange",
   });
   const [loading, setLoading] = useState(false);
   const router = useRouter();
 
-  const onSubmit = (data: any) => {
+  const onSubmit = (data: FormValues) => {
     setLoading(true);
 
     setTimeout(() => {
@@ -89,7 +94,7 @@ export default function LoginForm() {
         </Button>
       </div>
       <div className="w-full flex items-center justify-center my-5 text-sm">
-        <p>Don't have an account? </p>
+        <p>Don`&apos;`t have an account? </p>
         <Link href={"/signup"} className="ml-1 text-primary-blue">
           Sign Up
         </Link>

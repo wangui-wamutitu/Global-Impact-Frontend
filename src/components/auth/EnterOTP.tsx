@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import HeaderText from "../ui/HeaderText";
-import Input from "../ui/Input";
 import Button from "../ui/Button";
 import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
@@ -33,9 +32,9 @@ const EnterOTP = ({
         newPassword: false,
       });
     });
-  }, []);
+  }, [setHandleBack]);
 
-  const onSubmit = (data: any) => {
+  const onSubmit = () => {
     setLoading(true);
 
     setTimeout(() => {
@@ -86,7 +85,7 @@ const EnterOTP = ({
         </div>
       </form>
       <div className="w-full flex items-center justify-center my-5 text-sm">
-        <p>Didn't receive the OTP? </p>
+        <p>Didn`&apos;`t receive the OTP? </p>
         <button
           onClick={() =>
             toast.success("OTP resent! Please check your email", {

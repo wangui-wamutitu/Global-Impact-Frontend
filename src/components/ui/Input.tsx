@@ -3,11 +3,11 @@
 import { InputHTMLAttributes, forwardRef, useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import clsx from "clsx";
-import { FieldError, FieldErrorsImpl, Merge } from "react-hook-form";
+import { FieldError } from "react-hook-form";
 
 type InputProps = {
   label?: string;
-  error?: FieldError | Merge<FieldError, FieldErrorsImpl<any>>;
+  error?: FieldError;
   className?: string;
 } & InputHTMLAttributes<HTMLInputElement>;
 

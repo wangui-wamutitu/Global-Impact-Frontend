@@ -1,8 +1,6 @@
-import Button from "@/components/ui/Button";
 import HeaderText from "@/components/ui/HeaderText";
 import LoginForm from "@/components/auth/LoginForm";
 import Image from "next/image";
-import Link from "next/link";
 import React from "react";
 
 const LoginPage = () => {

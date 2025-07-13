@@ -8,6 +8,12 @@ import Link from "next/link";
 import { useState } from "react";
 import { toast } from "react-toastify";
 
+type FormValues = {
+  email: string;
+  password: string;
+  confirmpassword: string;
+};
+
 export default function SignupForm() {
   const [isTermsAccepted, setIsTermsAccepted] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -17,14 +23,14 @@ export default function SignupForm() {
     handleSubmit,
     formState: { errors },
     watch,
-  } = useForm({
+  } = useForm<FormValues>({
     mode: "onChange",
   });
 
   const password = watch("password");
   const router = useRouter();
 
-  const onSubmit = (data: any) => {
+  const onSubmit = (data: FormValues) => {
     setLoading(true);
 
     setTimeout(() => {
