@@ -1,4 +1,4 @@
-# Global Impact Marketplace – Auth Screens
+# Global Impact Marketplace – Auth Pages
 
 This project is a submission for the **Global Impact Frontend Challenge**, which involves building key authentication screens based on provided Figma designs.
 
@@ -47,4 +47,4 @@ npm run dev
 ```
 
 ### Deployed version
-
+- [`View the deployed version`](https://christine-global-impact-frontend.vercel.app/)
