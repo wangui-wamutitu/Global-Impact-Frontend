@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, DM_Sans } from "next/font/google";
+import { DM_Sans } from "next/font/google";
 import "./globals.css";
+import { ToastContainer } from "react-toastify";
 
 const dmSans = DM_Sans({
   variable: '--font-display',
@@ -23,6 +24,7 @@ export default function RootLayout({
       <body
         className={`${dmSans.variable} antialiased`}
       >
+        <ToastContainer />
         {children}
       </body>
     </html>
