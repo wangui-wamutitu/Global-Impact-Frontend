@@ -18,7 +18,7 @@ const ForgotPasswordPage = () => {
 
   return (
     <section>
-      <button className="absolute top-5 left-4 z-10" onClick={handleBack}>
+      <button className="fixed top-4 left-4 z-50" onClick={handleBack}>
         <IoArrowBack color="#2B6587" size={28} />
       </button>
 

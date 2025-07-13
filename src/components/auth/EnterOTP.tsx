@@ -85,7 +85,7 @@ const EnterOTP = ({
         </div>
       </form>
       <div className="w-full flex items-center justify-center my-5 text-sm">
-        <p>Didn`&apos;`t receive the OTP? </p>
+        <p>Didn&apos;t receive the OTP? </p>
         <button
           onClick={() =>
             toast.success("OTP resent! Please check your email", {

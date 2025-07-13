@@ -94,7 +94,7 @@ export default function LoginForm() {
         </Button>
       </div>
       <div className="w-full flex items-center justify-center my-5 text-sm">
-        <p>Don`&apos;`t have an account? </p>
+        <p>Don&apos;t have an account? </p>
         <Link href={"/signup"} className="ml-1 text-primary-blue">
           Sign Up
         </Link>
